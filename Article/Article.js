@@ -161,15 +161,27 @@ const articleComponent = (a, b, c, d, e) => {
     paragraph2.textContent = d;
   const paragraph3 = document.createElement('p');
     paragraph3.textContent = e;
+
+  const buttonToggler = (event) => {
+    articleDiv.classList.toggle('article-open');
+  };
+
   const button = document.createElement('button');
-  button.classList.add('expandButton');
+  button.classList.add('expand-button');
+  button.addEventListener('click', buttonToggler);
+  
+  
+
+
 
   articleDiv.appendChild(articleTitle);
   articleDiv.appendChild(articleDate);
+  articleDiv.appendChild(button);
   articleDiv.appendChild(paragraph1);
   articleDiv.appendChild(paragraph2);
   articleDiv.appendChild(paragraph3);
-  articleDiv.appendChild(button);
+
+  console.log(button);
 
   return articleDiv;
 
