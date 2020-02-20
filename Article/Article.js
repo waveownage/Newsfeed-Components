@@ -181,7 +181,7 @@ const articleComponent = (a, b, c, d, e) => {
   articleDiv.appendChild(paragraph2);
   articleDiv.appendChild(paragraph3);
 
-  console.log(button);
+  ;
 
   return articleDiv;
 
